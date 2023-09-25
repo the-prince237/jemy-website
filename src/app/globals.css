@@ -18,10 +18,71 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  overflow-x: hidden;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* designing scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #14161a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+input,
+textarea {
+  border: none;
+  outline: 0;
+  font-family: inherit;
+  background-color: unset;
+}
+
+
+/* designing number type input arrows */
+/* Chrome, Safari, Edge, Opera */
+input[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Hidding number type input arrows for phone */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* link styling */
+a {
+  color: inherit;
+  text-decoration: unset;
 }
